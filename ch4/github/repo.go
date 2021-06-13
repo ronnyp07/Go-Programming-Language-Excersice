@@ -10,7 +10,6 @@ import (
 
 func SearchIssues(terms []string) (*IssueSearchResult, error) {
 	q := url.QueryEscape(strings.Join(terms, " "))
-
 	resp, err := http.Get(IssueUrl + "?q=" + q)
 
 	if err != nil {
